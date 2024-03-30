@@ -43,7 +43,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         m_accel_0: m_accel_0 {
@@ -104,10 +104,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q        &kp W                 &kp E               &kp R                 &kp T            &kp Y      &kp U        &kp I      &kp O    &kp P           &sks_cw
-&mt LCTRL ESC  &mt LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F        &lt 9 G          &kp H      &kp J        &kp K      &kp L    &kp SEMI        &mt RCTRL SQT
-&tog 6         &mt LCMD Z   &kp X                 &kp C               &kp V                 &kp B            &kp N      &kp M        &kp COMMA  &kp DOT  &mt LCMD SLASH  &mt RALT BSLH
-                                                  &mt LS(TAB) TAB     &sks_mod LCMD LSHIFT  &lt 1 BACKSPACE  &lt 2 RET  &lt 4 SPACE  &lt 5 DEL
+&kp TAB        &kp Q            &kp W                 &kp E               &kp R                 &kp T            &kp Y      &kp U        &kp I      &kp O    &kp P                    &sks_cw
+&mt LCTRL ESC  &kp_mod LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F        &lt 9 G          &kp H      &kp J        &kp K      &kp L    &kp_mod LCTRL SEMICOLON  &kp SINGLE_QUOTE
+&tog 6         &kp_mod LCMD Z   &kp X                 &kp C               &kp V                 &kp B            &kp N      &kp M        &kp COMMA  &kp DOT  &kp_mod LCMD SLASH       &mt RALT BSLH
+                                                      &mt LS(TAB) TAB     &sks_mod LCMD LSHIFT  &lt 1 BACKSPACE  &lt 2 RET  &lt 4 SPACE  &lt 5 DEL
             >;
         };
 
@@ -140,10 +140,10 @@
 
         nav_layer {
             bindings = <
-&trans     &kp LG(W)            &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
-&trans     &mt LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
-&kp LSHFT  &kp LG(Z)            &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
-                                                    &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
+&trans     &kp LG(W)                &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
+&trans     &kp_mod LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
+&kp LSHFT  &kp LG(Z)                &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
+                                                        &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
             >;
 
             label = "Nav";
