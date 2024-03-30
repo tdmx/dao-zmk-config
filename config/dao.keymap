@@ -60,10 +60,10 @@
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4     &kp F5    &kp F6     &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp RALT
-                                  &lt 3 TAB  &trans    &trans     &trans     &trans    &lt 3 DEL
+&mt LGUI F1     &kp QMARK             &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp TAB            &caps_word  &caps_word  &kp UNDERSCORE  &kp QUESTION  &trans                &kp BACKSPACE
+&mt LCTRL PLUS  &kp AMPERSAND         &kp STAR     &kp DOLLAR  &kp HASH     &kp DOUBLE_QUOTES  &trans      &kp PLUS    &kp EQUAL       &kp GRAVE     &kp PIPE              &trans
+&mt LALT EQUAL  &kp NON_US_BACKSLASH  &kp PIPE     &kp CARET   &kp PERCENT  &trans             &trans      &kp MINUS   &kp COLON       &sk LSHIFT    &kp NON_US_BACKSLASH  &trans
+                                                   &lt 3 TAB   &trans       &trans             &trans      &trans      &lt 3 DEL
             >;
         };
 
@@ -87,13 +87,22 @@
 
         nav_layer {
             bindings = <
-&trans     &trans     &trans     &trans     &trans     &trans        &trans        &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
-&trans     &trans     &kp LSHFT  &kp LALT   &kp LGUI   &kp LCTRL     &kp LCTRL     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
-&kp LSHFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(LBKT)  &kp LG(RBKT)  &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
-                                 &trans     &trans     &trans        &trans        &trans     &trans
+&trans     &trans     &mt LEFT_ALT GRAVE  &kp DELETE  &kp BACKSPACE  &trans        &trans        &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
+&trans     &trans     &kp LSHFT           &kp LALT    &kp LGUI       &kp LCTRL     &kp LCTRL     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
+&kp LSHFT  &kp LG(Z)  &kp LG(X)           &kp LG(C)   &kp LG(V)      &kp LG(LBKT)  &kp LG(RBKT)  &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
+                                          &trans      &trans         &trans        &trans        &trans     &trans
             >;
 
             label = "Nav";
+        };
+
+        mouse_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
