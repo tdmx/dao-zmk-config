@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define DEF 0
 #define LWR 1
@@ -104,10 +104,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q        &kp W                 &kp E               &kp R                 &kp T            &kp Y      &kp U        &kp I               &kp O    &kp P           &sks_cw
-&mt LCTRL ESC  &mt LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F        &lt 9 G          &kp H      &kp J        &kp K               &kp L    &kp SEMI        &mt RCTRL SQT
-&tog 6         &mt LCMD Z   &kp X                 &kp C               &kp V                 &kp B            &kp N      &kp M        &kp COMMA           &kp DOT  &mt LCMD SLASH  &mt RALT BSLH
-                                                  &mt LS(TAB) TAB     &sks_mod LCMD LSHIFT  &lt 1 BACKSPACE  &lt 2 RET  &lt 4 SPACE  &mt LEFT_SHIFT DEL
+&kp TAB        &kp Q        &kp W                 &kp E               &kp R                 &kp T            &kp Y      &kp U        &kp I      &kp O    &kp P           &sks_cw
+&mt LCTRL ESC  &mt LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F        &lt 9 G          &kp H      &kp J        &kp K      &kp L    &kp SEMI        &mt RCTRL SQT
+&tog 6         &mt LCMD Z   &kp X                 &kp C               &kp V                 &kp B            &kp N      &kp M        &kp COMMA  &kp DOT  &mt LCMD SLASH  &mt RALT BSLH
+                                                  &mt LS(TAB) TAB     &sks_mod LCMD LSHIFT  &lt 1 BACKSPACE  &lt 2 RET  &lt 4 SPACE  &lt 5 DEL
             >;
         };
 
