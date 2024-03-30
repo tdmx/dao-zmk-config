@@ -73,7 +73,7 @@
         default_layer {
             bindings = <
 &kp TAB        &kp Q        &kp W                 &kp E               &kp R           &kp T            &kp Y      &kp U        &kp I               &kp O    &kp P           &sks_cw
-&mt LCTRL ESC  &mt LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F  &kp G            &kp H      &kp J        &kp K               &kp L    &kp SEMI        &mt RCTRL SQT
+&mt LCTRL ESC  &mt LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F  &lt 9 G          &kp H      &kp J        &kp K               &kp L    &kp SEMI        &mt RCTRL SQT
 &tog 6         &mt LCMD Z   &kp X                 &kp C               &kp V           &kp B            &kp N      &kp M        &kp COMMA           &kp DOT  &mt LCMD SLASH  &mt RALT BSLH
                                                   &mt LCMD TAB        &sks_cw         &lt 1 BACKSPACE  &lt 2 RET  &lt 4 SPACE  &mt LEFT_SHIFT DEL
             >;
@@ -84,7 +84,7 @@
 &trans  &kp QMARK             &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp TAB            &caps_word  &caps_word  &kp UNDERSCORE  &kp QUESTION  &trans                &kp BACKSPACE
 &trans  &kp AMPERSAND         &kp STAR     &kp DOLLAR  &kp HASH     &kp DOUBLE_QUOTES  &trans      &kp PLUS    &kp EQUAL       &kp GRAVE     &kp PIPE              &trans
 &tog 6  &kp NON_US_BACKSLASH  &kp PIPE     &kp CARET   &kp PERCENT  &trans             &trans      &kp MINUS   &kp COLON       &sk LSHIFT    &kp NON_US_BACKSLASH  &trans
-                                           &lt 3 TAB   &trans       &trans             &lt 3 RET   &trans      &lt 3 DEL
+                                           &trans      &trans       &trans             &lt 3 RET   &trans      &lt 3 DEL
             >;
         };
 
@@ -150,6 +150,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        f_key_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                        &trans  &trans  &kp LCMD  &trans  &trans  &trans
             >;
         };
     };
