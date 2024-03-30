@@ -108,10 +108,10 @@
 
         nav_layer {
             bindings = <
-&trans     &trans     &mt LEFT_ALT GRAVE  &kp DELETE  &kp BACKSPACE  &trans        &trans        &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
-&trans     &trans     &kp LSHFT           &kp LALT    &kp LGUI       &kp LCTRL     &kp LCTRL     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
-&kp LSHFT  &kp LG(Z)  &kp LG(X)           &kp LG(C)   &kp LG(V)      &kp LG(LBKT)  &kp LG(RBKT)  &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
-                                          &trans      &trans         &trans        &trans        &trans     &trans
+&trans     &kp LG(W)            &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
+&trans     &mt LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
+&kp LSHFT  &kp LG(Z)            &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
+                                                    &kp SINGLE_QUOTE  &kp SPACE      &trans               &trans                 &trans     &trans
             >;
 
             label = "Nav";
