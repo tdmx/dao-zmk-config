@@ -76,6 +76,17 @@
             quick-tap-ms = <125>;
             flavor = "balanced";
         };
+
+        krepeat_mod: krepeat_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KREPEAT_MOD";
+            bindings = <&kp>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -131,7 +142,7 @@
 &trans     &kp LG(W)            &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP    &kp PG_DN  &trans         &trans
 &trans     &mt LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN  &kp RIGHT  &kp RET        &trans
 &kp LSHFT  &kp LG(Z)            &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &kp TAB   &kp END    &kp LS(LG(Z))  &trans
-                                                    &kp SINGLE_QUOTE  &kp SPACE      &trans               &trans                 &trans     &trans
+                                                    &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
             >;
 
             label = "Nav";
