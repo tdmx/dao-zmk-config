@@ -4,11 +4,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: zmkmouse
+    - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkmouse
+      remote: petejohanson
       revision: feat/pointers-move-scroll
       import: app/west.yml
   self:
