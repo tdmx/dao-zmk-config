@@ -44,6 +44,27 @@
             quick-tap-ms = <125>;
             flavor = "balanced";
         };
+
+        m_accel_0: m_accel_0 {
+            compatible = "zmk,behavior-mouse-move";
+            label = "M_ACCEL_0";
+            #binding-cells = <1>;
+            acceleration-exponent = <1>;
+        };
+
+        m_accel_1: m_accel_1 {
+            compatible = "zmk,behavior-mouse-move";
+            label = "M_ACCEL_1";
+            #binding-cells = <1>;
+            acceleration-exponent = <2>;
+        };
+
+        m_accel_2: m_accel_2 {
+            compatible = "zmk,behavior-mouse-move";
+            label = "M_ACCEL_2";
+            #binding-cells = <1>;
+            acceleration-exponent = <3>;
+        };
     };
 
     keymap {
@@ -98,10 +119,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(W)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LS(LC(TAB))  &mmv MOVE_UP    &kp LC(TAB)      &kp UP_ARROW    &trans
+&trans  &trans     &trans     &trans     &trans     &trans  &trans  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp DOWN_ARROW  &trans
+&trans  &trans     &trans     &trans     &trans     &trans  &trans  &mkp LCLK        &mkp MCLK       &mkp RCLK        &trans          &trans
+                              &trans     &trans     &trans  &trans  &trans           &trans
             >;
         };
     };
