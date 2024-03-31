@@ -230,10 +230,10 @@
 
         switch_test_layer {
             bindings = <
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&tog 9  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                      &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&to 9  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
