@@ -147,10 +147,10 @@
 
         lower_layer {
             bindings = <
-&trans  &kp QMARK        &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp TAB            &trans       &caps_word         &kp UNDERSCORE  &kp QUESTION  &trans           &kp BACKSPACE
-&trans  &kp AMPERSAND    &kp STAR     &kp DOLLAR  &kp HASH     &kp DOUBLE_QUOTES  &trans       &kp PLUS           &kp EQUAL       &kp GRAVE     &kp PIPE         &trans
-&tog 6  &kp NON_US_BSLH  &kp PIPE     &kp CARET   &kp PERCENT  &trans             &trans       &kp MINUS          &kp COLON       &sk LSHIFT    &kp NON_US_BSLH  &trans
-                                      &trans      &trans       &trans             &lt 3 SPACE  &mt LSHIFT RETURN  &lt 3 DEL
+&trans  &kp QMARK        &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp TAB            &trans       &caps_word    &kp UNDERSCORE  &kp QUESTION  &trans           &kp BACKSPACE
+&trans  &kp AMPERSAND    &kp STAR     &kp DOLLAR  &kp HASH     &kp DOUBLE_QUOTES  &trans       &kp PLUS      &kp EQUAL       &kp GRAVE     &kp PIPE         &trans
+&tog 6  &kp NON_US_BSLH  &kp PIPE     &kp CARET   &kp PERCENT  &trans             &trans       &kp MINUS     &kp COLON       &sk LSHIFT    &kp NON_US_BSLH  &trans
+                                      &trans      &trans       &trans             &lt 3 SPACE  &lt 5 RETURN  &lt 3 DEL
             >;
         };
 
