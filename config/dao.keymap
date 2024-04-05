@@ -18,6 +18,11 @@
 
 &mt { quick_tap_ms = <200>; };
 
+&sk {
+    quick-release;
+    release-after-ms = <2000>;
+};
+
 / {
     chosen {
         zmk,matrix_transform = &default_transform;
@@ -35,9 +40,9 @@
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
 
-        kp_mod: kp_mod {
+        kp_mod_tap_pref: kp_mod_tap_pref {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_MOD";
+            label = "KP_MOD_TAP_PREF";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -133,6 +138,39 @@
             quick-tap-ms = <125>;
             flavor = "tap-preferred";
         };
+
+        kp_mod_hold_pref: kp_mod_hold_pref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_MOD_HOLD_PREF";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "hold-preferred";
+        };
+
+        sks_layer: sks_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SKS_LAYER";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+        };
+
+        kp_layer_balanced: kp_layer_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_LAYER_BALANCED";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -149,10 +187,10 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q            &kp W                 &kp E               &kp R                 &kp T                            &kp Y        &kp U                         &kp I      &kp O    &kp P                    &sks_cw
-&lt 5 ESC  &kp_mod LCTRL A  &kp_mod LEFT_SHIFT S  &kp_mod LEFT_ALT D  &kp_mod LCMD F        &lt 9 G                          &kp H        &kp J                         &kp K      &kp L    &kp_mod LCTRL SEMICOLON  &kp_mod LCMD SINGLE_QUOTE
-&tog 6     &kp_mod LCMD Z   &kp X                 &kp C               &kp V                 &kp B                            &kp N        &kp M                         &kp COMMA  &kp DOT  &kp_mod LCMD SLASH       &mt RALT BSLH
-                                                  &mt LS(TAB) TAB     &sks_mod LCMD LSHIFT  &kp_layer_hold_pref 1 BACKSPACE  &lt 2 SPACE  &kp_layer_hold_pref 4 RETURN  &lt 5 DEL
+&kp TAB    &kp Q                     &kp W                          &kp E                        &kp R                             &kp T                &kp Y                       &kp U                         &kp I      &kp O    &kp P                             &sks_cw
+&lt 5 ESC  &kp_mod_tap_pref LCTRL A  &kp_mod_tap_pref LEFT_SHIFT S  &kp_mod_tap_pref LEFT_ALT D  &kp_mod_tap_pref LCMD F           &lt 9 G              &kp H                       &kp J                         &kp K      &kp L    &kp_mod_tap_pref LCTRL SEMICOLON  &kp_mod_tap_pref LCMD SINGLE_QUOTE
+&tog 6     &kp_mod_tap_pref LCMD Z   &kp X                          &kp C                        &kp V                             &kp B                &kp N                       &kp M                         &kp COMMA  &kp DOT  &kp_mod_tap_pref LCMD SLASH       &mt RALT BSLH
+                                                                    &mt LS(TAB) TAB              &kp_mod_hold_pref LGUI BACKSPACE  &sks_layer 1 LSHIFT  &kp_layer_balanced 2 SPACE  &kp_layer_hold_pref 4 RETURN  &lt 5 DEL
             >;
         };
 
@@ -185,10 +223,10 @@
 
         nav_layer {
             bindings = <
-&trans     &kp LG(W)                &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP           &kp PG_DN  &trans         &trans
-&trans     &kp_mod LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN         &kp RIGHT  &kp RET        &trans
-&kp LSHFT  &kp LG(Z)                &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &mt LS(TAB) TAB  &kp END    &kp LS(LG(Z))  &trans
-                                                        &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
+&trans     &kp LG(W)                         &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP           &kp PG_DN  &trans         &trans
+&trans     &kp_mod_tap_pref LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN         &kp RIGHT  &kp RET        &trans
+&kp LSHFT  &kp LG(Z)                         &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &mt LS(TAB) TAB  &kp END    &kp LS(LG(Z))  &trans
+                                                                 &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
             >;
 
             label = "Nav";
