@@ -222,9 +222,9 @@
         raise_layer {
             bindings = <
 &kp TAB  &kp KP_SLASH     &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_MINUS  &kp TAB          &kp DOLLAR    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSPACE  &trans
-&trans   &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &sks_cw        &kp BACKSPACE
-&trans   &kp SPACE        &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_COMMA  &kp KP_DIVIDE    &kp KP_MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RETURN     &trans
-                                     &kp KP_DOT  &kp KP_N0  &lt 3 RET     &lt 3 ESC        &trans        &trans
+&trans   &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSPACE  &kp BACKSPACE
+&trans   &kp ENTER        &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_COMMA  &kp KP_DIVIDE    &kp KP_MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RETURN     &trans
+                                     &kp KP_DOT  &kp KP_N0  &lt 3 SPACE   &lt 3 ESC        &trans        &trans
             >;
         };
 
