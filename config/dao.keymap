@@ -47,7 +47,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
 
@@ -79,7 +79,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
         };
 
@@ -90,7 +90,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
         };
 
@@ -101,7 +101,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
         };
 
         mouse_mv_speed_1: mouse_mv_speed_1 {
@@ -135,7 +135,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
 
@@ -146,7 +146,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "hold-preferred";
         };
 
@@ -157,7 +157,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
         };
 
@@ -168,8 +168,19 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
+        };
+
+        sks_layer_hold_pref: sks_layer_hold_pref {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SKS_LAYER_HOLD_PREF";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
         };
     };
 
@@ -201,10 +212,10 @@
 
         lower_layer {
             bindings = <
-&trans  &kp QMARK        &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp TAB            &trans       &caps_word                        &kp UNDERSCORE  &kp QUESTION  &trans           &kp BACKSPACE
-&trans  &kp AMPERSAND    &kp STAR     &kp DOLLAR  &kp HASH     &kp DOUBLE_QUOTES  &trans       &kp PLUS                          &kp EQUAL       &kp GRAVE     &kp PIPE         &trans
-&tog 6  &kp NON_US_BSLH  &kp PIPE     &kp CARET   &kp PERCENT  &trans             &trans       &kp MINUS                         &kp COLON       &sk LSHIFT    &kp NON_US_BSLH  &trans
-                                      &trans      &trans       &trans             &lt 3 SPACE  &kp_layer_hold_pref 5 LS(RETURN)  &lt 3 DEL
+&kp LS(TAB)  &kp LESS_THAN    &kp AT_SIGN  &kp EXCL    &kp TILDE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &caps_word                        &kp UNDERSCORE   &kp QUESTION  &kp GREATER_THAN  &kp BACKSPACE
+&trans       &kp AMPERSAND    &kp STAR     &kp DOLLAR  &kp HASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS                          &kp EQUAL        &kp GRAVE     &kp COLON         &kp DOUBLE_QUOTES
+&trans       &kp NON_US_BSLH  &kp PIPE     &kp CARET   &kp PERCENT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS                         &kp COLON        &kp PIPE      &kp NON_US_BSLH   &trans
+                                           &trans      &trans       &trans                &lt 3 SPACE            &kp_layer_hold_pref 5 LS(RETURN)  &lt 3 BACKSPACE
             >;
         };
 
