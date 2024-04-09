@@ -203,10 +203,10 @@
 
         default_layer {
             bindings = <
-&kp TAB                 &kp Q                     &kp W                          &kp E                        &kp R                             &kp T                          &kp Y                        &kp U                         &kp I      &kp O    &kp P                             &sks_cw
-&lt 5 ESC               &kp_mod_tap_pref LCTRL A  &kp_mod_tap_pref LEFT_SHIFT S  &kp_mod_tap_pref LEFT_ALT D  &kp_mod_tap_pref LCMD F           &lt 9 G                        &kp H                        &kp J                         &kp K      &kp L    &kp_mod_tap_pref LCTRL SEMICOLON  &kp_mod_tap_pref LCMD SINGLE_QUOTE
-&sks_mod LSHIFT LSHIFT  &kp_mod_tap_pref LCMD Z   &kp X                          &kp C                        &kp V                             &kp B                          &kp N                        &kp M                         &kp COMMA  &kp DOT  &kp_mod_tap_pref LCMD SLASH       &mt RALT BSLH
-                                                                                 &mt LS(TAB) TAB              &kp_mod_hold_pref LGUI BACKSPACE  &sks_layer_hold_pref 1 LSHIFT  &kp_layer_hold_pref 2 SPACE  &kp_layer_hold_pref 4 RETURN  &lt 5 DEL
+&kp TAB                 &kp Q                     &kp W                          &kp E                        &kp R                              &kp T                          &kp Y                        &kp U                         &kp I      &kp O    &kp P                            &sks_cw
+&lt 5 ESC               &kp_mod_tap_pref LGUI A   &kp_mod_tap_pref LEFT_SHIFT S  &kp_mod_tap_pref LEFT_ALT D  &kp_mod_tap_pref LCTRL F           &lt 9 G                        &kp H                        &kp J                         &kp K      &kp L    &kp_mod_tap_pref LGUI SEMICOLON  &kp_mod_tap_pref LCTRL SINGLE_QUOTE
+&sks_mod LSHIFT LSHIFT  &kp_mod_tap_pref LCTRL Z  &kp X                          &kp C                        &kp V                              &kp B                          &kp N                        &kp M                         &kp COMMA  &kp DOT  &kp_mod_tap_pref LCTRL SLASH     &mt RALT BSLH
+                                                                                 &mt LS(TAB) TAB              &kp_mod_hold_pref LCTRL BACKSPACE  &sks_layer_hold_pref 1 LSHIFT  &kp_layer_hold_pref 2 SPACE  &kp_layer_hold_pref 4 RETURN  &lt 5 DEL
             >;
         };
 
@@ -239,10 +239,10 @@
 
         nav_layer {
             bindings = <
-&trans     &kp LG(W)                         &mt LEFT_ALT GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP           &kp PG_DN  &trans         &trans
-&trans     &kp_mod_tap_pref LCTRL LS(LG(A))  &kp LSHFT           &kp LALT          &kp LGUI       &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN         &kp RIGHT  &kp RET        &trans
-&kp LSHFT  &kp LG(Z)                         &kp LG(X)           &kp LG(C)         &kp LG(V)      &kp LG(LBKT)         &kp LG(RBKT)           &kp HOME   &mt LS(TAB) TAB  &kp END    &kp LS(LG(Z))  &trans
-                                                                 &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
+&trans     &kp LC(W)                        &mt LCTRL GRAVE  &kp DELETE        &kp BACKSPACE  &kp LS(LC(PAGE_UP))  &kp LS(LC(PAGE_DOWN))  &kp PG_UP  &kp UP           &kp PG_DN  &trans         &trans
+&trans     &kp_mod_tap_pref LGUI LS(LC(A))  &kp LSHFT        &kp LALT          &kp LCTRL      &kp LC(LS(TAB))      &kp LC(TAB)            &kp LEFT   &kp DOWN         &kp RIGHT  &kp RET        &trans
+&kp LSHFT  &kp LC(Z)                        &kp LC(X)        &kp LC(C)         &kp LC(V)      &kp LC(LBKT)         &kp LC(RBKT)           &kp HOME   &mt LS(TAB) TAB  &kp END    &kp LS(LC(Z))  &trans
+                                                             &kp SINGLE_QUOTE  &kp SPACE      &kp DEL              &trans                 &trans     &trans
             >;
 
             label = "Nav";
@@ -250,7 +250,7 @@
 
         mouse_layer {
             bindings = <
-&trans  &kp LG(W)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LS(LC(TAB))  &mmv MOVE_UP    &kp LC(TAB)      &kp UP_ARROW    &trans
+&trans  &kp LC(W)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &kp LS(LC(TAB))  &mmv MOVE_UP    &kp LC(TAB)      &kp UP_ARROW    &trans
 &trans  &trans     &trans     &trans     &trans     &trans  &trans  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp DOWN_ARROW  &trans
 &trans  &trans     &trans     &trans     &trans     &trans  &trans  &mkp LCLK        &mkp MCLK       &mkp RCLK        &trans          &trans
                               &trans     &trans     &trans  &trans  &trans           &trans
@@ -286,10 +286,10 @@
 
         f_key_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                        &trans  &trans  &kp LCMD  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                        &trans  &trans  &kp LCTRL  &trans  &trans  &trans
             >;
         };
     };
