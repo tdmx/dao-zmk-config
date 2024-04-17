@@ -19,10 +19,7 @@
 
 &mt { quick_tap_ms = <200>; };
 
-&sk {
-    quick-release;
-    release-after-ms = <2000>;
-};
+&sk { quick-release; };
 
 / {
     chosen {
