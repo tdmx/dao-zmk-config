@@ -25,6 +25,12 @@
 
 &sk { quick-release; };
 
+&mmv_const {
+    delay-ms = <0>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+};
+
 / {
     chosen {
         zmk,matrix_transform = &default_transform;
@@ -138,15 +144,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "hold-preferred";
-        };
-
-        mmv_const: mmv_const {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MMV_CONST";
-            #binding-cells = <1>;
-            delay-ms = <0>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <0>;
         };
     };
 
