@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <behaviors/mouse_keys.dtsi>
 
 #define DEF 0
 #define LWR 1
@@ -102,28 +102,31 @@
             quick-tap-ms = <150>;
         };
 
-        mouse_mv_speed_1: mouse_mv_speed_1 {
+        mmv1: mmv1 {
             compatible = "zmk,behavior-mouse-move";
-            label = "MOUSE_MV_SPEED_1";
+            label = "MMV1";
             #binding-cells = <1>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <1>;
+            delay-ms = <0>;
         };
 
-        mouse_mv_speed_2: mouse_mv_speed_2 {
+        mmv2: mmv2 {
             compatible = "zmk,behavior-mouse-move";
-            label = "MOUSE_MV_SPEED_2";
+            label = "MMV2";
             #binding-cells = <1>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <2>;
+            delay-ms = <0>;
         };
 
-        mouse_mv_speed_3: mouse_mv_speed_3 {
+        mmv3: mmv3 {
             compatible = "zmk,behavior-mouse-move";
-            label = "MOUSE_MV_SPEED_3";
+            label = "MMV3";
             #binding-cells = <1>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <3>;
+            delay-ms = <0>;
         };
 
         kp_layer_tap_pref: kp_layer_tap_pref {
@@ -257,28 +260,28 @@
 
         mouse_speed_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &mouse_mv_speed_1 MOVE_UP    &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mouse_mv_speed_1 MOVE_LEFT  &mouse_mv_speed_1 MOVE_DOWN  &mouse_mv_speed_1 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                       &trans                        &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv1 MOVE_UP    &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv1 MOVE_LEFT  &mmv1 MOVE_DOWN  &mmv1 MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans           &trans
             >;
         };
 
         mouse_speed_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &mouse_mv_speed_2 MOVE_UP    &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mouse_mv_speed_2 MOVE_LEFT  &mouse_mv_speed_2 MOVE_DOWN  &mouse_mv_speed_2 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                       &trans                        &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv2 MOVE_UP    &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv2 MOVE_LEFT  &mmv2 MOVE_DOWN  &mmv2 MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans           &trans
             >;
         };
 
         mouse_speed_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &mouse_mv_speed_3 MOVE_UP    &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mouse_mv_speed_3 MOVE_LEFT  &mouse_mv_speed_3 MOVE_DOWN  &mouse_mv_speed_3 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                       &trans                        &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv3 MOVE_UP    &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv3 MOVE_LEFT  &mmv3 MOVE_DOWN  &mmv3 MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans           &trans
             >;
         };
 
