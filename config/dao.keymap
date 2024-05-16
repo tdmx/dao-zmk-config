@@ -183,6 +183,15 @@
             quick-tap-ms = <150>;
             flavor = "hold-preferred";
         };
+
+        mmv_jump: mmv_jump {
+            compatible = "zmk,behavior-mouse-move";
+            label = "MMV_JUMP";
+            #binding-cells = <1>;
+            delay-ms = <0>;
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
+        };
     };
 
     combos {
@@ -252,7 +261,7 @@
         mouse_layer {
             bindings = <
 &none  &kp LG(W)  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &none  &kp LS(LC(TAB))  &mmv MOVE_UP    &kp LC(TAB)      &kp UP_ARROW    &kp PAGE_UP
-&none  &none      &mo 6      &mo 7      &mo 8      &none  &none  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp DOWN_ARROW  &kp PAGE_DOWN
+&none  &none      &mo 6      &mo 0      &mo 0      &none  &none  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp DOWN_ARROW  &kp PAGE_DOWN
 &none  &none      &none      &none      &none      &none  &none  &mkp LCLK        &mkp MCLK       &mkp RCLK        &none           &none
                              &none      &none      &none  &none  &none            &none
             >;
@@ -260,28 +269,28 @@
 
         mouse_speed_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv1 MOVE_UP    &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv1 MOVE_LEFT  &mmv1 MOVE_DOWN  &mmv1 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -200  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -200 0  &mmv_jump MOVE 0 200   &mmv_jump MOVE 200 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans                 &trans
             >;
         };
 
         mouse_speed_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv2 MOVE_UP    &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv2 MOVE_LEFT  &mmv2 MOVE_DOWN  &mmv2 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -400  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -400 0  &mmv_jump MOVE 0 400   &mmv_jump MOVE 400 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans                 &trans
             >;
         };
 
         mouse_speed_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &mmv3 MOVE_UP    &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv3 MOVE_LEFT  &mmv3 MOVE_DOWN  &mmv3 MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans            &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -600  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -600 0  &mmv_jump MOVE 0 600   &mmv_jump MOVE 600 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans                 &trans
             >;
         };
 
