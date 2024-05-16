@@ -25,11 +25,13 @@
 
 &sk { quick-release; };
 
-&mmv_const {
-    delay-ms = <0>;
-    time-to-max-speed-ms = <0>;
-    acceleration-exponent = <0>;
-};
+/*
+* &mmv_const {
+*     delay-ms = <0>;
+*     time-to-max-speed-ms = <0>;
+*     acceleration-exponent = <0>;
+* };
+*/
 
 / {
     chosen {
@@ -222,8 +224,8 @@
 
         mouse_speed_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_1)  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_1)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_1)   &mmv_const MOVE_X(MOUSE_MV_SPEED_1)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv MOVE_Y(-MOUSE_MV_SPEED_1)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_X(MOUSE_MV_SPEED_1)  &mmv MOVE_Y(MOUSE_MV_SPEED_1)   &mmv MOVE_X(MOUSE_MV_SPEED_1)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -231,8 +233,8 @@
 
         mouse_speed_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_2)  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_2)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_2)   &mmv_const MOVE_X(MOUSE_MV_SPEED_2)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv MOVE_Y(-MOUSE_MV_SPEED_2)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_X(MOUSE_MV_SPEED_2)  &mmv MOVE_Y(MOUSE_MV_SPEED_2)   &mmv MOVE_X(MOUSE_MV_SPEED_2)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -240,8 +242,8 @@
 
         mouse_speed_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_3)  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_3)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_3)   &mmv_const MOVE_X(MOUSE_MV_SPEED_3)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv MOVE_Y(-MOUSE_MV_SPEED_3)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_X(MOUSE_MV_SPEED_3)  &mmv MOVE_Y(MOUSE_MV_SPEED_3)   &mmv MOVE_X(MOUSE_MV_SPEED_3)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
