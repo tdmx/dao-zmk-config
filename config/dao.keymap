@@ -15,6 +15,10 @@
 #define RSE 2
 #define ADJ 3
 
+#define MOUSE_MV_SPEED_1 200
+#define MOUSE_MV_SPEED_2 400
+#define MOUSE_MV_SPEED_3 600
+
 &lt { quick_tap_ms = <200>; };
 
 &mt { quick_tap_ms = <200>; };
@@ -269,8 +273,8 @@
 
         mouse_speed_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -200  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -200 0  &mmv_jump MOVE 0 200   &mmv_jump MOVE 200 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE_Y(-MOUSE_MV_SPEED_1)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE_X(MOUSE_MV_SPEED_1)  &mmv_jump MOVE_Y(MOUSE_MV_SPEED_1)   &mmv_jump MOVE_X(MOUSE_MV_SPEED_1)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -278,8 +282,8 @@
 
         mouse_speed_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -400  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -400 0  &mmv_jump MOVE 0 400   &mmv_jump MOVE 400 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE_Y(-MOUSE_MV_SPEED_2)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE_X(MOUSE_MV_SPEED_2)  &mmv_jump MOVE_Y(MOUSE_MV_SPEED_2)   &mmv_jump MOVE_X(MOUSE_MV_SPEED_2)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -287,8 +291,8 @@
 
         mouse_speed_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE 0 -600  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE -600 0  &mmv_jump MOVE 0 600   &mmv_jump MOVE 600 0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_jump MOVE_Y(-MOUSE_MV_SPEED_3)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_jump MOVE_X(MOUSE_MV_SPEED_3)  &mmv_jump MOVE_Y(MOUSE_MV_SPEED_3)   &mmv_jump MOVE_X(MOUSE_MV_SPEED_3)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
