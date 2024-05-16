@@ -53,27 +53,6 @@
             flavor = "tap-preferred";
         };
 
-        m_accel_0: m_accel_0 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "M_ACCEL_0";
-            #binding-cells = <1>;
-            acceleration-exponent = <1>;
-        };
-
-        m_accel_1: m_accel_1 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "M_ACCEL_1";
-            #binding-cells = <1>;
-            acceleration-exponent = <2>;
-        };
-
-        m_accel_2: m_accel_2 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "M_ACCEL_2";
-            #binding-cells = <1>;
-            acceleration-exponent = <3>;
-        };
-
         sks_mod: sks_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "SKS_MOD";
@@ -104,33 +83,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-        };
-
-        mmv1: mmv1 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MMV1";
-            #binding-cells = <1>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <1>;
-            delay-ms = <0>;
-        };
-
-        mmv2: mmv2 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MMV2";
-            #binding-cells = <1>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <2>;
-            delay-ms = <0>;
-        };
-
-        mmv3: mmv3 {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MMV3";
-            #binding-cells = <1>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <3>;
-            delay-ms = <0>;
         };
 
         kp_layer_tap_pref: kp_layer_tap_pref {
