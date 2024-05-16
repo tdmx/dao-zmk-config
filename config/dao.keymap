@@ -225,8 +225,8 @@
 
         mouse_speed_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_UP  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_LEFT  &mmv_const MOVE_DOWN   &mmv_const MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_1)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_1)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_1)   &mmv_const MOVE_X(MOUSE_MV_SPEED_1)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -234,8 +234,8 @@
 
         mouse_speed_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_UP  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_LEFT  &mmv_const MOVE_DOWN   &mmv_const MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_2)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_2)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_2)   &mmv_const MOVE_X(MOUSE_MV_SPEED_2)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
@@ -243,8 +243,8 @@
 
         mouse_speed_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_UP  &trans                &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_LEFT  &mmv_const MOVE_DOWN   &mmv_const MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &mmv_const MOVE_Y(-MOUSE_MV_SPEED_3)  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv_const MOVE_X(MOUSE_MV_SPEED_3)  &mmv_const MOVE_Y(MOUSE_MV_SPEED_3)   &mmv_const MOVE_X(MOUSE_MV_SPEED_3)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                 &trans                 &trans                &trans  &trans
                         &trans  &trans  &trans  &trans  &trans                 &trans
             >;
